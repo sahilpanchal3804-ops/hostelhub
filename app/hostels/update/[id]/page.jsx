@@ -123,13 +123,13 @@ export default function UpdateHostelPage({ params: paramsPromise }) {
 
   const handlePrevImage = () => {
     setCurrentImageIndex((prev) =>
-      prev === 0 ? (hostel?.images?.length || 1) - 1 : prev - 1
+      prev === 0 ? (hostel?.images?.length || 1) - 1 : prev - 1,
     );
   };
 
   const handleNextImage = () => {
     setCurrentImageIndex((prev) =>
-      prev === (hostel?.images?.length || 1) - 1 ? 0 : prev + 1
+      prev === (hostel?.images?.length || 1) - 1 ? 0 : prev + 1,
     );
   };
 
@@ -328,7 +328,7 @@ export default function UpdateHostelPage({ params: paramsPromise }) {
           <Button
             type="button"
             variant="outline"
-            onClick={() => router.push(`/hostels/${id}`)}
+            onClick={() => router.push(`/hostels/listhostels`)}
           >
             Cancel
           </Button>

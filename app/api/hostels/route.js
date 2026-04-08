@@ -13,7 +13,7 @@ export async function POST(req) {
     if (!name || !price || !provider || !address) {
       return NextResponse.json(
         { success: false, message: "Missing required fields" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -31,7 +31,7 @@ export async function POST(req) {
     console.error("Error creating hostel:", error);
     return NextResponse.json(
       { success: false, message: error.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -51,7 +51,7 @@ export async function GET(req) {
       if (!mongoose.Types.ObjectId.isValid(userId)) {
         return NextResponse.json(
           { success: false, message: "Invalid user ID" },
-          { status: 400 }
+          { status: 400 },
         );
       }
       query.provider = new mongoose.Types.ObjectId(userId);
@@ -63,13 +63,13 @@ export async function GET(req) {
 
     return NextResponse.json(
       { success: true, hostels, count: hostels.length },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Error fetching hostels:", error);
     return NextResponse.json(
       { success: false, message: error.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
