@@ -15,9 +15,12 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useSearchStore } from "@/store/useSearchStore";
+import { useTheme } from "next-themes";
+import { Button } from "./ui/button";
 
 const Topbar = () => {
   const { uid, email, image, setUser, clearUser } = useUserStore();
+  const { theme, setTheme } = useTheme();
   const { clearStorage } = useSearchStore();
   const [loggin, setloggin] = useState(false);
   const [isSheetOpen, setIsSheetOpen] = useState(false); // State to control Sheet
@@ -74,7 +77,7 @@ const Topbar = () => {
 
   return (
     <div className="fixed left-0 top-0 z-10 w-full">
-      <nav className="bg-white/80 backdrop-blur-md border-b border-rose-200">
+      <nav className="bg-background/80 backdrop-blur-md border-b border-rose-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -84,7 +87,7 @@ const Topbar = () => {
               </div>
               <Link href={"/"}>
                 <span className="text-2xl font-bold bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
-                  HostelFinder
+                  HostelHub
                 </span>
               </Link>
             </div>

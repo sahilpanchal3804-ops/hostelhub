@@ -34,19 +34,19 @@ export default function Home() {
       gsap.fromTo(
         titleRef.current,
         { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+        { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
       );
 
       gsap.fromTo(
         subtitleRef.current,
         { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.3, ease: "power2.out" }
+        { opacity: 1, y: 0, duration: 1, delay: 0.3, ease: "power2.out" },
       );
 
       gsap.fromTo(
         searchRef.current,
         { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.6, ease: "back.out(1.7)" }
+        { opacity: 1, y: 0, duration: 1, delay: 0.6, ease: "back.out(1.7)" },
       );
 
       gsap.fromTo(
@@ -63,7 +63,7 @@ export default function Home() {
             start: "top 85%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       // Section title animations
@@ -79,7 +79,7 @@ export default function Home() {
             start: "top 85%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -95,7 +95,7 @@ export default function Home() {
             start: "top 80%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       // Features animation
@@ -112,7 +112,7 @@ export default function Home() {
             start: "top 85%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       // CTA section animation
@@ -128,7 +128,7 @@ export default function Home() {
             start: "top 85%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       // Add hover animations to cards
@@ -163,7 +163,7 @@ export default function Home() {
     try {
       setSearch(true);
       const response = await fetch(
-        `/api/search?q=${encodeURIComponent(searchQuery)}`
+        `/api/search?q=${encodeURIComponent(searchQuery)}`,
       );
 
       if (!response.ok) {
@@ -407,7 +407,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Why Choose HostelFinder?
+              Why Choose HostelHub?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               We make finding and booking the perfect hostel simple, safe, and
@@ -445,7 +445,7 @@ export default function Home() {
             Ready for Your Next Adventure?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join thousands of travelers who trust HostelFinder for their
+            Join thousands of travelers who trust HostelHub for their
             accommodation needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -464,7 +464,7 @@ export default function Home() {
                 <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">H</span>
                 </div>
-                <span className="text-2xl font-bold">HostelFinder</span>
+                <span className="text-2xl font-bold">HostelHub</span>
               </div>
               <p className="text-gray-400">
                 Making hostel discovery simple and enjoyable for every traveler.
@@ -493,7 +493,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 HostelFinder. All rights reserved.</p>
+            <p>&copy; 2026 HostelHub. Developed by sahil Panchal</p>
           </div>
         </div>
       </footer>

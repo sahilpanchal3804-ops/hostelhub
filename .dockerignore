@@ -1,0 +1,38 @@
+# Node.js dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Build output
+.next
+out
+dist
+
+# Local environment files
+.env.local
+.env.development
+.env.test
+.env.*
+
+# Docker-related
+.dockerignore
+Dockerfile
+docker-compose*.yml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE / Editor files
+.vscode
+.idea
+*.swp
+*.swo
+
+# Git
+.git
+.gitignore
